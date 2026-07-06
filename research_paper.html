@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RPPS Research Paper | GitHub Static Page</title>
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --card: #ffffff;
+      --text: #1f2937;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .navbar {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .container-paper {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .paper-card {
+      background: var(--card);
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-weight: 700;
+      border-left: 6px solid var(--primary);
+      padding-left: 14px;
+      margin-bottom: 25px;
+      color: #111827;
+    }
+
+    h3, h4, h5 {
+      font-weight: 700;
+    }
+
+    .keyword {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 7px 14px;
+      border-radius: 25px;
+      margin: 5px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .formula {
+      background: #f1f5f9;
+      border-left: 5px solid #0ea5e9;
+      padding: 16px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-family: "Courier New", monospace;
+      font-weight: 600;
+    }
+
+    .mini-card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+      height: 100%;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .profile-box {
+      background: #eef6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .flow-box {
+      background: white;
+      border: 2px solid #dbeafe;
+      padding: 18px;
+      border-radius: 14px;
+      height: 100%;
+      text-align: center;
+    }
+
+    .document-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      background: #ffffff;
+    }
+
+    .document-header {
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .doc-paper {
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+    }
+
+    .doc-literature {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
+
+    .doc-report {
+      background: linear-gradient(135deg, #16a34a, #166534);
+    }
+
+    .pdf-preview {
+      width: 100%;
+      height: 420px;
+      border: none;
+      background: #f8fafc;
+    }
+
+    .footer {
+      background: var(--light);
+      color: black;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .table th {
+      vertical-align: middle;
+    }
+
+    .print-btn {
+      border-radius: 30px;
+      padding: 10px 22px;
+      font-weight: 700;
+    }
+
+    @media print {
+      nav,
+      .print-btn,
+      .profile-box,
+      .footer,
+      #document-showcase {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .paper-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">
+      <i class="bi bi-diagram-3-fill"></i> RPPS Research
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#document-showcase">Documents</a></li>
+        <li class="nav-item"><a class="nav-link" href="#research-paper">Research Paper</a></li>
+        <li class="nav-item"><a class="nav-link" href="#literature-review">Literature Review</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project-report">Project Report</a></li>
+        <li class="nav-item"><a class="nav-link" href="#methodology">Methodology</a></li>
+        <li class="nav-item"><a class="nav-link" href="#profile-builder">Profile Builder</a></li>
+        <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="container">
+    <h1>Resource Project Planning System</h1>
+    <h4 class="mt-3">Enhancing Workforce Utilisation and Project Efficiency through Intelligent Planning</h4>
+
+    <p class="lead mt-3">
+      Research Paper | Literature Review | Final Project Report | Profile Builder
+    </p>
+
+    <p>
+      Prepared by <strong>Akansha Rana</strong> |
+      Department of Data Science, MSC |
+      Vellore Institute of Technology
+    </p>
+
+    <button onclick="window.print()" class="btn btn-light print-btn mt-3">
+      <i class="bi bi-printer"></i> Print / Save as PDF
+    </button>
+  </div>
+</header>
+
+<main class="container-paper my-5">
+
+  <section id="document-showcase" class="paper-card">
+    <span class="section-badge">PDF Document Showcase</span>
+
+    <h2>Attached Project Documents</h2>
+
+    <p>
+      This section showcases the initially attached RPPS documents. Upload these PDF files inside your GitHub project
+      under the <strong>documents/</strong> folder and keep the file names same as used below.
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="document-card">
+          <div class="document-header doc-paper">
+            <i class="bi bi-file-earmark-pdf-fill" style="font-size: 52px;"></i>
+            <h4 class="mt-2">Research Paper</h4>
+          </div>
+
+          <div class="p-3">
+            <p>
+              RPPS research paper covering abstract, indexed terms, introduction, algorithms,
+              methodology, findings, conclusion, and references.
+            </p>
+
+            <iframe class="pdf-preview" src="./research_paper.pdf"></iframe>
+
+            <div class="d-grid gap-2 mt-3">
+              <a href="./research_paper.pdf" target="_blank" class="btn btn-danger">
+                <i class="bi bi-box-arrow-up-right"></i> Open Research Paper
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="document-card">
+          <div class="document-header doc-literature">
+            <i class="bi bi-journal-bookmark-fill" style="font-size: 52px;"></i>
+            <h4 class="mt-2">Literature Review</h4>
+          </div>
+
+          <div class="p-3">
+            <p>
+              Literature review covering workforce analytics, resource constraints, root cause analysis,
+              risk analysis, supply chain model, and conceptual framework.
+            </p>
+
+            <iframe class="pdf-preview" src="./literature-review.pdf"></iframe>
+
+            <div class="d-grid gap-2 mt-3">
+              <a href="./literature-review.pdf" target="_blank" class="btn btn-primary">
+                <i class="bi bi-box-arrow-up-right"></i> Open Literature Review
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="document-card">
+          <div class="document-header doc-report">
+            <i class="bi bi-file-earmark-richtext-fill" style="font-size: 52px;"></i>
+            <h4 class="mt-2">Final Project Report</h4>
+          </div>
+
+          <div class="p-3">
+            <p>
+              Final report including summary, objectives, dataset description, methodology,
+              analysis, findings, managerial implications, and future scope.
+            </p>
+
+            <iframe class="pdf-preview" src="./final-project-report.pdf"></iframe>
+
+            <div class="d-grid gap-2 mt-3">
+              <a href="./final-project-report.pdf" target="_blank" class="btn btn-success">
+                <i class="bi bi-box-arrow-up-right"></i> Open Final Report
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="paper-card text-center">
+    <h2 class="border-0">Author & Project Information</h2>
+
+    <p><strong>Project Title:</strong> Resource Project Planning System (RPPS)</p>
+    <p><strong>Author:</strong> Akansha Rana</p>
+    <p><strong>Department:</strong> Department of Data Science, MSC</p>
+    <p><strong>Institute:</strong> Vellore Institute of Technology</p>
+    <p><strong>Email:</strong> akansha.rana2024e@vitstudent.ac.in</p>
+    <p><strong>Approver:</strong> Dr. Murali S</p>
+  </section>
+
+  <section id="research-paper" class="paper-card">
+    <span class="section-badge">Research Paper Section</span>
+
+    <h2>Research Paper</h2>
+
+    <h3>Title</h3>
+    <p>
+      <strong>
+        Resource Project Planning System:
+        Enhancing Workforce Utilisation and Project Efficiency through Intelligent Planning
+      </strong>
+    </p>
+
+    <h3>Abstract</h3>
+    <p>
+      In modern IT, government, consulting, and service-based organisations, workforce underutilisation is a major operational challenge.
+      Employees who remain on the bench without active project allocation increase operational costs, reduce productivity,
+      and create skill stagnation. The Resource Project Planning System (RPPS) is proposed as a data science-driven workforce
+      optimisation framework that integrates machine learning, recommendation systems, optimisation algorithms, risk analysis,
+      forecasting, and business intelligence dashboards.
+    </p>
+
+    <p>
+      RPPS analyses candidate profiles, project requirements, employee skills, experience level, domain expertise,
+      performance records, and workforce demand. The system provides automated candidate-project matching, skill-gap analysis,
+      global resource allocation, candidate segmentation, performance tracking, bench-risk monitoring, and future demand forecasting.
+    </p>
+
+    <h4>Indexed Terms</h4>
+
+    <span class="keyword">Workforce Analytics</span>
+    <span class="keyword">Resource Allocation</span>
+    <span class="keyword">Bench Management</span>
+    <span class="keyword">Skill Gap Analysis</span>
+    <span class="keyword">Project Recommendation System</span>
+    <span class="keyword">Machine Learning in HR</span>
+    <span class="keyword">Predictive Modelling</span>
+    <span class="keyword">Talent Optimisation</span>
+
+    <hr>
+
+    <h3>1. Introduction</h3>
+    <p>
+      Organisations frequently face resource planning issues such as wrong allocation, poor bench visibility,
+      project staffing delays, skill gaps, and weak forecasting. Traditional systems often depend on manual spreadsheets,
+      resulting in delayed decision-making and mismatched allocation. RPPS converts workforce planning from a reactive
+      process into a proactive, data-driven decision system.
+    </p>
+
+    <h3>2. Problem Statement</h3>
+    <p>
+      The major problem addressed by RPPS is the inability of organisations to efficiently map available talent
+      to suitable project opportunities. This leads to bench cost, underutilised employees, skill-demand mismatch,
+      and project delivery delays.
+    </p>
+
+    <h3>3. Research Objectives</h3>
+    <ol>
+      <li>Develop an automated data pipeline for candidate and project data processing.</li>
+      <li>Build a recommendation engine for candidate-project matching.</li>
+      <li>Implement global resource allocation using optimisation algorithms.</li>
+      <li>Perform candidate segmentation using clustering techniques.</li>
+      <li>Track workforce performance using productivity KPIs.</li>
+      <li>Forecast future resource demand and workforce availability.</li>
+      <li>Provide actionable insights through interactive dashboards.</li>
+    </ol>
+  </section>
+
+  <section id="literature-review" class="paper-card">
+    <span class="section-badge">Literature Review Section</span>
+
+    <h2>Literature Review</h2>
+
+    <p>
+      The literature review identifies major constraints in workforce and project resource planning.
+      These constraints include human capital constraints, economic constraints, operational constraints,
+      and knowledge or IT constraints. RPPS addresses these constraints using a combined analytical approach.
+    </p>
+
+    <h3>Comparative Analysis: Resource Constraints and Algorithmic Interventions</h3>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Constraint Category</th>
+            <th>Recommended Algorithm</th>
+            <th>Advantages</th>
+            <th>Limitations</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>Skill Matching</strong><br>Human Capital</td>
+            <td>Cosine Similarity, NLP, TF-IDF</td>
+            <td>Effective for semantic matching between candidate profiles and project descriptions.</td>
+            <td>Requires clean and standardised skill data.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Resource Assignment</strong><br>Operational</td>
+            <td>Hungarian Algorithm</td>
+            <td>Finds optimal one-to-one project-candidate assignment.</td>
+            <td>Can become computationally expensive for very large datasets.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Utilisation Prediction</strong><br>Bench / PIP Risk</td>
+            <td>Random Forest, XGBoost, Logistic Regression</td>
+            <td>Identifies risk profile of employees likely to remain on bench.</td>
+            <td>Some models may be difficult to explain to HR teams.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Demand Forecasting</strong><br>Financial Planning</td>
+            <td>ARIMA, Linear Regression, Prophet</td>
+            <td>Forecasts seasonal hiring and future resource demand.</td>
+            <td>Requires historical data for higher accuracy.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Workforce Segmentation</strong><br>Capability Planning</td>
+            <td>K-Means Clustering</td>
+            <td>Groups employees into meaningful workforce segments.</td>
+            <td>Selecting the correct number of clusters can be subjective.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Research Gap</h3>
+
+    <div class="alert alert-warning">
+      Existing workforce planning systems usually focus only on staffing or scheduling.
+      Very few systems integrate recommendation, optimisation, forecasting, performance tracking,
+      skill-gap analysis, risk analysis, and dashboarding into one intelligent framework.
+      RPPS fills this gap by combining workforce analytics and machine learning into a single planning system.
+    </div>
+
+    <h3>Root Cause Analysis</h3>
+
+    <p>
+      RPPS identifies the root cause of resource underutilisation as the absence of an integrated system
+      that connects historical workforce data, predictive demand, and prescriptive skill matching.
+    </p>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>People</h5>
+          <p>Skill gaps, PIP isolation, low motivation, and mismatch between expertise and demand.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Process</h5>
+          <p>Reactive staffing, fragmented planning, manual mapping, and poor forecasting.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Technology</h5>
+          <p>No analytics dashboard, no skill mapping tools, and disconnected data sources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project-report" class="paper-card">
+    <span class="section-badge">Final Project Report Section</span>
+
+    <h2>Project Report</h2>
+
+    <h3>Executive Summary</h3>
+
+    <p>
+      RPPS was developed as an intelligent workforce optimisation platform that integrates data engineering,
+      machine learning, optimisation algorithms, forecasting models, and business intelligence tools to automate
+      candidate-project matching and improve workforce utilisation.
+    </p>
+
+    <h3>System Components</h3>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Data Pipeline</h5>
+          <p>Collects, cleans, validates, and prepares candidate and project data.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Recommendation Engine</h5>
+          <p>Uses TF-IDF and cosine similarity for project matching.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Global Allocation</h5>
+          <p>Uses Hungarian Algorithm for optimal resource assignment.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Segmentation</h5>
+          <p>Uses K-Means to group candidates based on skills and capabilities.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Performance Tracking</h5>
+          <p>Tracks execution accuracy, completion efficiency, and performance yield.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mini-card">
+          <h5>Forecasting</h5>
+          <p>Uses Linear Regression and ARIMA to forecast workforce demand.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Dataset Description</h3>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Candidate Dataset</h5>
+        <ul>
+          <li>Candidate ID</li>
+          <li>Candidate Name</li>
+          <li>Email</li>
+          <li>LinkedIn</li>
+          <li>Skills</li>
+          <li>Technologies</li>
+          <li>Experience Level</li>
+          <li>Domain</li>
+          <li>Profile Description</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Project Dataset</h5>
+        <ul>
+          <li>Project ID</li>
+          <li>Project Title</li>
+          <li>Project Role</li>
+          <li>Required Skills</li>
+          <li>Required Experience</li>
+          <li>Domain</li>
+          <li>Budget</li>
+          <li>Company Name</li>
+          <li>Project Description</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Performance Dataset</h5>
+        <ul>
+          <li>Candidate ID</li>
+          <li>Project ID</li>
+          <li>Execution Accuracy</li>
+          <li>Completion Efficiency</li>
+          <li>Task Complexity</li>
+          <li>Performance Yield</li>
+          <li>Date</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="methodology" class="paper-card">
+    <h2>Methodology</h2>
+
+    <h3>Phase 1: Data Engineering Pipeline</h3>
+
+    <p>
+      Candidate profiles, project requirements, and performance records are collected and transformed into structured datasets.
+      Data cleaning includes missing value treatment, duplicate removal, text standardisation, and feature validation.
+    </p>
+
+    <h3>Phase 2: Feature Engineering</h3>
+
+    <div class="formula">
+      candidate_soup = skills + tools_technologies + profile_description + experience_level
+    </div>
+
+    <div class="formula">
+      project_soup = required_skills + tools_required + project_description
+    </div>
+
+    <div class="formula">
+      data_soup = candidate_soup + project_soup
+    </div>
+
+    <h3>Phase 3: Recommendation Engine</h3>
+
+    <p>
+      TF-IDF converts text data into numerical vectors. Cosine similarity compares candidate profiles with project requirements.
+    </p>
+
+    <div class="formula">
+      TF-IDF = TF(t,d) × IDF(t)
+    </div>
+
+    <div class="formula">
+      Cosine Similarity = (A · B) / (||A|| × ||B||)
+    </div>
+
+    <h3>Phase 4: Global Allocation Engine</h3>
+
+    <p>
+      The Hungarian Algorithm is used to find the globally optimal assignment between candidates and projects.
+    </p>
+
+    <div class="formula">
+      Z = min Σ Σ Cij Xij
+    </div>
+
+    <h3>Phase 5: Candidate Segmentation</h3>
+
+    <p>
+      K-Means clustering groups candidates into meaningful clusters such as high-skill candidates, moderate-skill candidates,
+      specialised experts, and candidates requiring upskilling.
+    </p>
+
+    <h3>Phase 6: Forecasting Engine</h3>
+
+    <p>
+      Linear Regression and ARIMA models forecast daily, weekly, monthly, and yearly resource demand.
+    </p>
+  </section>
+
+  <section class="paper-card">
+    <h2>Risk Analysis</h2>
+
+    <p>
+      Risk analysis in RPPS acts as a proactive workforce health check.
+      It identifies bench stagnation, skill obsolescence, PIP failure risk, and project delay risk.
+    </p>
+
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Risk Factor</th>
+            <th>Algorithm</th>
+            <th>Metric</th>
+            <th>Actionable Strategy</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Bench Stagnation</td>
+            <td>Logistic Regression</td>
+            <td>Deployment Probability &lt; 0.3</td>
+            <td>Automated Upskilling Trigger</td>
+          </tr>
+
+          <tr>
+            <td>Skill Obsolescence</td>
+            <td>TF-IDF Comparison</td>
+            <td>Skill Relevance Index</td>
+            <td>Strategic Training Shift</td>
+          </tr>
+
+          <tr>
+            <td>PIP Failure</td>
+            <td>Random Forest</td>
+            <td>Risk Score &gt; 0.8</td>
+            <td>Structured Mentorship Assignment</td>
+          </tr>
+
+          <tr>
+            <td>Project Delay</td>
+            <td>Monte Carlo Simulation</td>
+            <td>Probability of Completion</td>
+            <td>Resource Reallocation from Bench</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="paper-card">
+    <h2>Supply Chain Model for Workforce Planning</h2>
+
+    <p>
+      RPPS treats workforce planning like a supply chain model.
+      The bench is considered workforce inventory, upskilling is the transformation process,
+      and project demand is the final requirement.
+    </p>
+
+    <div class="row g-3">
+      <div class="col-md-3">
+        <div class="flow-box">
+          <h5>Supply</h5>
+          <p>Internal talent pool and external hiring pipeline.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="flow-box">
+          <h5>Inventory</h5>
+          <p>Bench, PIP, and underutilised employees.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="flow-box">
+          <h5>Transformation</h5>
+          <p>Upskilling and readiness improvement.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="flow-box">
+          <h5>Demand</h5>
+          <p>Live and forecasted project requirements.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula mt-4">
+      EOQ = √(2DS / H)
+    </div>
+
+    <p>
+      Where D is annual demand for a skill, S is training setup cost,
+      and H is the holding cost of a resource on the bench.
+    </p>
+  </section>
+
+  <section class="paper-card">
+    <h2>Conceptual Framework: RPPS IPO Model</h2>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="flow-box">
+          <h4>Input</h4>
+          <p>
+            Candidate data, project data, skills, experience, performance logs,
+            bench records, PIP records, and risk indicators.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flow-box">
+          <h4>Process</h4>
+          <p>
+            TF-IDF, cosine similarity, Hungarian Algorithm, K-Means clustering,
+            Random Forest, Logistic Regression, and ARIMA.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flow-box">
+          <h4>Output</h4>
+          <p>
+            Candidate recommendations, allocation matrix, skill-gap analysis,
+            risk alerts, forecasts, and dashboards.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-card">
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>Skill-based recommendation improves candidate-project matching.</li>
+      <li>Global optimisation reduces allocation conflicts.</li>
+      <li>Candidate segmentation supports targeted workforce planning.</li>
+      <li>Performance tracking improves productivity visibility.</li>
+      <li>Forecasting supports future resource planning.</li>
+      <li>Risk analysis helps identify bench stagnation and PIP failure early.</li>
+      <li>Dashboards support data-driven managerial decision-making.</li>
+    </ul>
+  </section>
+
+  <section class="paper-card">
+    <h2>Managerial Implications</h2>
+
+    <p>
+      RPPS helps HR managers, project managers, and leadership teams reduce bench cost,
+      improve internal deployment rate, identify skill gaps, design upskilling programs,
+      forecast future demand, and make strategic workforce decisions.
+      It is applicable in IT services, consulting firms, staffing agencies, healthcare organisations,
+      manufacturing, education, and government organisations.
+    </p>
+  </section>
+
+  <section id="profile-builder" class="paper-card profile-box">
+    <h2>RPPS Static Profile Builder</h2>
+
+    <p>
+      This profile builder allows users to create a static candidate profile
+      and generate a candidate soup for RPPS demonstration.
+    </p>
+
+    <form id="profileForm">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Candidate Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter candidate name">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email address">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">LinkedIn</label>
+          <input type="url" class="form-control" id="linkedin" placeholder="Enter LinkedIn profile URL">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Primary Category</label>
+          <select class="form-select" id="category">
+            <option>Software & IT</option>
+            <option>Science & Research</option>
+            <option>Finance</option>
+            <option>Engineering</option>
+            <option>Healthcare</option>
+            <option>Education</option>
+            <option>Textile</option>
+            <option>Art & Craft</option>
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Sub Role</label>
+          <input type="text" class="form-control" id="role" placeholder="Example: Data Scientist, Backend Developer">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Experience Level</label>
+          <select class="form-select" id="experience">
+            <option>Fresher</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+            <option>Expert</option>
+          </select>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label class="form-label">Skills</label>
+          <textarea class="form-control" id="skills" rows="3" placeholder="Python, SQL, Machine Learning, Django, Power BI"></textarea>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label class="form-label">Tools & Technologies</label>
+          <textarea class="form-control" id="tools" rows="2" placeholder="GitHub, Docker, TensorFlow, Tableau, PostgreSQL"></textarea>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label class="form-label">Profile Description</label>
+          <textarea class="form-control" id="description" rows="3" placeholder="Write candidate profile summary"></textarea>
+        </div>
+      </div>
+
+      <button type="button" onclick="buildProfile()" class="btn btn-primary">
+        <i class="bi bi-person-lines-fill"></i> Generate Profile
+      </button>
+
+      <button type="reset" class="btn btn-outline-secondary">
+        Reset
+      </button>
+    </form>
+
+    <div id="profileOutput" class="mt-4"></div>
+  </section>
+
+  <section id="references" class="paper-card">
+    <h2>References</h2>
+
+    <ol>
+      <li>Resource Project Planning System Literature Review, Department of Data Science, VIT.</li>
+      <li>Resource Project Planning System Final Project Report, Department of Data Science, VIT.</li>
+      <li>Research methods related to workforce analytics, recommendation systems, optimisation algorithms, clustering, and forecasting.</li>
+      <li>TF-IDF, Cosine Similarity, Hungarian Algorithm, K-Means Clustering, Random Forest, Logistic Regression, ARIMA, and Business Intelligence dashboarding concepts.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="mb-1">© 2026 Resource Project Planning System</p>
+  <p class="mb-0">Prepared by Akansha Rana | GitHub Pages Static Research Website</p>
+</footer>
+
+<script>
+  function buildProfile() {
+    const name = document.getElementById("name").value || "Candidate Name";
+    const email = document.getElementById("email").value || "candidate@email.com";
+    const linkedin = document.getElementById("linkedin").value || "Not Provided";
+    const category = document.getElementById("category").value;
+    const role = document.getElementById("role").value || "Not Provided";
+    const experience = document.getElementById("experience").value;
+    const skills = document.getElementById("skills").value || "Not Provided";
+    const tools = document.getElementById("tools").value || "Not Provided";
+    const description = document.getElementById("description").value || "No profile description added.";
+
+    const candidateSoup = `${skills} ${tools} ${description} ${role} ${experience} ${category}`;
+
+    document.getElementById("profileOutput").innerHTML = `
+      <div class="card shadow-sm border-primary">
+        <div class="card-body">
+          <h4 class="text-primary">${name}</h4>
+
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>LinkedIn:</strong> ${linkedin}</p>
+          <p><strong>Primary Category:</strong> ${category}</p>
+          <p><strong>Sub Role:</strong> ${role}</p>
+          <p><strong>Experience Level:</strong> ${experience}</p>
+          <p><strong>Skills:</strong> ${skills}</p>
+          <p><strong>Tools & Technologies:</strong> ${tools}</p>
+          <p><strong>Profile Description:</strong> ${description}</p>
+
+          <hr>
+
+          <h5>Generated Candidate Soup</h5>
+
+          <div class="bg-light p-3 rounded">
+            ${candidateSoup}
+          </div>
+
+          <div class="alert alert-success mt-3">
+            Candidate profile generated successfully for RPPS recommendation model demonstration.
+          </div>
+        </div>
+      </div>
+    `;
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

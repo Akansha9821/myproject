@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akansha Rana Profile</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* GLOBAL */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        /* COMMON LAYOUT CONTAINER (SAME FOR HEADER, MAIN, FOOTER) */
+        .layout-container {
+            max-width: 1100px;
+            /* common width */
+            margin: 0 auto;
+            padding: 0 20px;
+            /* horizontal padding for all sections */
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 2px solid #ccc;
+            background: #ffffff;
+        }
+
+        header h3 {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            margin: 2px 0;
+        }
+
+        .print-profile-btn {
+            border: none;
+            background: #0056d2;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+
+        .print-profile-btn:hover {
+            background: #003f9e;
+        }
+
+        /* MAIN CONTENT WRAPPER */
+        main {
+            padding: 20px 0 30px 0;
+        }
+
+        .section-box {
+            border: 1px solid #ccc;
+            padding: 50px;
+            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 6px;
+        }
+
+        #left,
+        #right {
+            border: 1px solid #bbb;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h5 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /*************** PROJECT CARD *****************/
+        .project-card {
+            border: 1px solid #d0d0d0;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h6 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /*************** CLEAN MODERN PROJECT TABLE *****************/
+        .project-table {
+            margin-top: 15px;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+        }
+
+        .project-table thead {
+            background: #2f3640;
+            color: #fff;
+        }
+
+        .project-table thead th {
+            padding: 10px 12px;
+            border: none;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .project-table tbody td {
+            padding: 10px 12px;
+            border-top: 1px solid #efefef;
+        }
+
+        .project-table tbody tr:hover {
+            background: #fafafa;
+            transition: 0.3s ease;
+        }
+
+        .project-table a {
+            color: #0056d2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-table a:hover {
+            text-decoration: underline;
+        }
+
+        /*************** CAROUSEL ARROWS *****************/
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        /*************** CERTIFICATION ACCORDION *****************/
+        .certification-accordion {
+            border: 1px solid #e3e7ee;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .certification-accordion .accordion-button {
+            background: #ffffff;
+            color: #2f3640;
+            font-weight: 700;
+            padding: 14px 16px;
+        }
+
+        .certification-accordion .accordion-button:not(.collapsed) {
+            background: #f4f7fb;
+            color: #0056d2;
+            box-shadow: none;
+        }
+
+        .certification-accordion .accordion-button:focus {
+            border-color: #b8c6d9;
+            box-shadow: 0 0 0 0.15rem rgba(0, 86, 210, 0.15);
+        }
+
+        .certification-accordion .accordion-body {
+            background: #ffffff;
+            padding: 18px;
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            border: 1px solid #eef1f5;
+            border-radius: 8px;
+            background: #f4f7fb;
+        }
+
+        .certificate-issuer {
+            color: #555;
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            color: #0056d2;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .certificate-link:hover {
+            text-decoration: underline;
+        }
+
+        /*************** FOOTER *****************/
+        footer {
+            border-top: 2px solid;
+            background: #ffffff;
+            padding: 20px 20px;
+            width: 100%;
+        }
+
+        .footer-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-top: 50px;
+            border-color: #e5e5e5;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .footer-list li {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /*************** RESPONSIVE TWEAKS *****************/
+        @media (max-width: 768px) {
+            header h3 {
+                font-size: 1.6rem;
+            }
+
+            #left,
+            #right {
+                padding: 15px;
+            }
+
+            .section-box {
+                padding: 12px;
+            }
+
+            .footer-box {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header h3 {
+                font-size: 1.4rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .project-table thead th,
+            .project-table tbody td {
+                font-size: 0.85rem;
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.25in;
+            }
+
+            body {
+                background: #ffffff;
+                color: #000000;
+                font-size: 8px;
+                line-height: 1.18;
+            }
+
+            .print-profile-btn,
+            .carousel-control-prev,
+            .carousel-control-next,
+            .certificate-link,
+            script {
+                display: none !important;
+            }
+
+            .layout-container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            header {
+                border-bottom: 1px solid #999;
+            }
+
+            header .layout-container {
+                padding-top: 4px !important;
+                padding-bottom: 4px !important;
+            }
+
+            header h3 {
+                font-size: 15px;
+                margin-bottom: 2px;
+            }
+
+            header p {
+                font-size: 7px;
+                margin: 1px 0;
+            }
+
+            main {
+                padding: 4px 0;
+            }
+
+            .row {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                gap: 6px !important;
+            }
+
+            .col-12,
+            .col-md-6 {
+                width: 50% !important;
+                flex: 0 0 50% !important;
+                max-width: 50% !important;
+            }
+
+            #left,
+            #right,
+            .section-box,
+            footer {
+                border: 1px solid #bbb;
+                box-shadow: none !important;
+                border-radius: 0;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+            h5 {
+                font-size: 9px;
+                padding-bottom: 2px;
+                margin-bottom: 3px;
+            }
+
+            h6,
+            p,
+            li,
+            td,
+            th,
+            a {
+                font-size: 7px !important;
+            }
+
+            ul,
+            ol {
+                margin-bottom: 3px;
+                padding-left: 12px;
+            }
+
+            .project-card,
+            .accordion-body {
+                padding: 5px;
+                box-shadow: none;
+            }
+
+            .project-table {
+                margin-top: 4px;
+            }
+
+            .project-table thead th,
+            .project-table tbody td {
+                padding: 3px;
+            }
+
+            .accordion-button {
+                padding: 4px 6px !important;
+                font-size: 7px !important;
+            }
+
+            .certificate-image {
+                max-height: 55px;
+            }
+
+            footer .layout-container {
+                padding: 0;
+            }
+
+            .footer-title {
+                padding-top: 0;
+                font-size: 8px;
+                margin-bottom: 2px;
+            }
+
+            .footer-copy {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="layout-container text-center py-4">
+            <h3>Akansha Rana</h3>
+            <p>Senior Software Engineer| Senior Backend Engineer | Data Consultant | Data Engineer | Data Science</p>
+            <p><b>Email:</b> akansha.rana9821@gmail.com | rana.akansha321@gmail.com <b>Phone:</b> +91 9821916413</p>
+            <p><b>Work Location:</b> Noida, Gurugram, Pune</p>
+            <p>
+                <b>GitHub:</b>
+                <a href="https://github.com/" target="_blank">github.com</a> |
+                <b>LinkedIn:</b>
+                <a href="https://linkedin.com/" target="_blank">linkedin.com</a>
+            </p>
+            <button class="print-profile-btn" type="button" onclick="printProfile()">Print Profile</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="layout-container">
+
+            <!-- SUMMARY -->
+            <div class="section-box">
+                <h5>Summary</h5>
+                <p>
+                    Results-driven Data & Software Engineer with 6+ years of experience delivering enterprise-scale data
+                    engineering, analytics, cloud, and backend solutions. Proven expertise in Data Migration, ETL
+                    Pipelines, Data Modeling, Supply Chain Analytics, Cloud Platforms, Machine Learning, and API
+                    Development. Experienced in Azure, AWS, GCP, Databricks, Snowflake, Python, SQL, and modern data
+                    architectures. 
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- LEFT COLUMN -->
+                <div class="col-12 col-md-6" id="left">
+
+                    <div class="section-box">
+                        <h5>Education</h5>
+                        <ul>
+                            <li><b>M.S</b> | Vellore Institute Of Technologies | Data Science</li>
+                            <li><b>B.Tech</b> | J.B Institute of Technology | Computer Science </li>
+                            <li><b>12th</b> | Pinewood School | PCM</li>
+                            <li><b>10th</b> | Pinewood School | Science</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <h5>Internship</h5>
+                        <ul>
+                            <li>
+                                <p><b>IOT & Robotics Internship </b> | Inspireleap Private Limited, Online</b></p>
+                            </li>
+                            <li>
+                                <p><b>WordPress Trainee</b> | Itenic Solution, Noida</p>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="section-box">
+                        <h5>Technical Skills</h5>
+                        <ul>
+                            <li><b>Programming:</b>Python, SQL, R, PHP, JavaScript, HTML5, CSS3</li>
+                            <li><b>Frameworks:</b>Django, Flask, FastAPI, Streamline, React</li>
+                            <li><b>Data Engineering:</b>Data bricks, Snowflake, ETL Pipelines, Data Modeling, Data
+                                Architecture</li>
+                            <li><b>Cloud:</b>Azure, AWS, GCP, EC2, Lambda, S3, Azure Blob Storage</li>
+                            <li><b>Databases:</b>PostgreSQL, MySQL, SQLite, MongoDB, Redis, DynamoDB</li>
+                            <li><b> DevOps:</b>Git, Azure DevOps, Docker, Kubernetes</li>
+                            <li><b> Analytics:</b>Tableau, Data Visualisation, Machine Learning, Predictive Analytics
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <h5>Tools & Technologies</h5>
+                        <ul>
+                            <li>Databricks</li>
+                            <li>Snowflake</li>
+                            <li>Power BI</li>
+                            <li>Tableau</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Synapse</li>
+                            <li>Delta Lake</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <h5>Languages</h5>
+                        <ul>
+                            <li>English(Professional)</li>
+                            <li>Hindi(Native)</li>
+                            <li>Spanich(Beginer)</li>
+                            <li>French(Beginer)</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <h5>Work Profile Focus</h5>
+                        <ul>
+                            <li><b>Delivery Strength:</b> End-to-end ownership from requirement analysis to deployment
+                                support.</li>
+                            <li><b>Data Focus:</b> ETL pipelines, migration validation, analytics dashboards, and
+                                decision-support reporting.</li>
+                            <li><b>Engineering Style:</b> Clean backend APIs, scalable data models, code review, and
+                                documentation-first delivery.</li>
+                            <li><b>Leadership:</b> Mentoring junior developers, sprint coordination, stakeholder
+                                communication, and cross-team collaboration.</li>
+                            <li><b>Business Impact:</b> Workforce planning, resource optimisation, process automation,
+                                and performance monitoring.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-12 col-md-6" id="right">
+
+                        <div class="section-box">
+                            <h5>Experience</h5>
+                            <ol>
+                                <li>
+                                    <b>Senior Software Engineer, Data Consultant – Tredence Analytics</b> (Jul 2023–Nov
+                                    2025)<br>
+                                    <b>Project:</b> Data Migration, Data Validation, Data Modelling, Supply Chain and
+                                    Capacity Planning, Integrated Data Analytics & Performance Monitoring Platform<br>
+                                    <b>Skills Used:</b> Python, FastAPI, PySpark, Streamlit, Databricks, Snowflake,
+                                    Azure, GCP, Git, Azure DevOps, Synapse, SQL, MySQL, PostgreSQL, Linux Shell
+                                    Scripting, Windows<br>
+                                    <b>Live Project:</b> <a href="https://notebooklm.google.com/"
+                                        target="_blank">https://notebooklm.google.com/</a><br>
+                                    <b><u>Roles & Responsibilities:</u></b>
+                                    <ul>
+                                        <li>Designed and implemented a data migration and validation framework to
+                                            transition enterprise HealthCare data assets from Teradata to modern
+                                            cloud-based data platforms (Snowflake/Databricks) while ensuring accuracy,
+                                            consistency, and performance optimization.</li>
+                                        <li>Migrated analytical and reporting data from Snowflake to Databricks,
+                                            implemented data lineage tracking, and automated Tableau metadata extraction
+                                            for improved data governance and visibility.</li>
+                                        <li>Designed and implemented an automated data processing and knowledge
+                                            assistance pipeline integrating API data ingestion, Azure-based storage, and
+                                            LLM prompt engineering for intelligent response generation.</li>
+                                        <li>Designed and optimized data-driven solutions for Nestlé’s Global Command
+                                            Center and Capacity Planning initiatives to enhance operational efficiency,
+                                            demand forecasting, and resource management within the CPG and Supply Chain
+                                            domain.</li>
+                                        <li>Led the design, development, and delivery of data-driven solutions under the
+                                            IRIS program, focusing on improving data accuracy, analytical capabilities,
+                                            and cross-functional insights for the CPG and Supply Chain vertical.</li>
+                                    </ul>
+                                </li>
+
+                                <li class="mt-2">
+                                    <b>Software Engineer – GroupM Media</b> (Jun 2021–Jun 2023)<br>
+                                    <b>Project:</b> Synapse<br>
+                                    <b>Skills Used:</b> Python, Django, Azure, SQL, SQLite, API Development, RestAPI,
+                                    Git, Windows, Linux<br>
+                                    <b><u>Roles & Responsibilities:</u></b>
+                                    <ul>
+                                        <li>Gathered and collected data from various sources, including databases, APIs,
+                                            and external sources.</li>
+                                        <li>Applied statistical methods and techniques to analyze and interpret data.
+                                        </li>
+                                        <li>Used data visualization tools and techniques to present findings in a clear
+                                            and meaningful way.</li>
+                                        <li>Developed and programmed software solutions using Python, Django, and SQL
+                                            Server.</li>
+                                        <li>Designed and architected new features from scratch, ensuring scalability and
+                                            performance.</li>
+                                        <li>Created reports, dashboards, and visualizations to communicate analytical
+                                            findings and recommendations.</li>
+                                        <li>Refactored and documented code to meet coding standards and maintainability.
+                                        </li>
+                                        <li>Identified opportunities for application enhancement, made recommendations,
+                                            and implemented systems accordingly.</li>
+                                        <li>Led and managed a team of junior developers, providing guidance and support.
+                                        </li>
+                                        <li>Managed projects using Scrum methodology, including code review, testing,
+                                            and deployment.</li>
+                                        <li>Conducted testing and debugging of code, including the creation of automated
+                                            unit tests when necessary.</li>
+                                    </ul>
+                                </li>
+
+                                <li class="mt-2">
+                                    <b>Contract Software Developer – Full Time/Contract/Trainee</b> (Sep 2019–May
+                                    2021)<br>
+                                    <b>Projects:</b> Chat Bot Backend Design, Rest API Design, SEO Addition, Bill
+                                    Payment Microservice, WordPress Website Design<br>
+                                    <b>Skills Used:</b> Python, Django, FastAPI, WordPress, Flask, AWS, Azure, SQL,
+                                    MySQL, DynamoDB, AWS Lambda, EC2, Lex Bot, Windows, Linux<br>
+                                    <b>Project Link:</b> <a href="https://www.kramate.com/"
+                                        target="_blank">https://www.kramate.com/</a><br>
+                                    <b>Employment History:</b> Square Yards Pvt Ltd (Feb 2021-May 2021), D2C Consultancy
+                                    (Sep 2020-Dec 2020), Kramate Pvt Ltd (Feb 2020-Apr 2020), Shine Group Pvt Ltd (Apr
+                                    2019-Jan 2020), BI Infotech Pvt Ltd (Apr 2018-Jun 2019)<br>
+                                    <b><u>Roles & Responsibilities:</u></b>
+                                    <ul>
+                                        <li>Designed and implemented robust, scalable REST APIs using Python, Django,
+                                            Flask, and FastAPI to support various frontend clients and external
+                                            integrations.</li>
+                                        <li>Architected and deployed a high-availability Bill Payment Microservice,
+                                            ensuring transactional integrity and seamless payment processing.</li>
+                                        <li>Leveraged AWS services including Lambda for serverless workflows and
+                                            computing, and EC2 for hosting scalable application instances.</li>
+                                        <li>Managed cross-cloud environments utilizing Azure infrastructure and deployed
+                                            services across both Linux and Windows operating systems.</li>
+                                        <li>Designed, optimized, and managed relational and NoSQL database schemas using
+                                            SQL, MySQL, and DynamoDB to support high-throughput application needs.</li>
+                                        <li>Designed and integrated an intelligent Chat Bot Backend utilizing AWS Lex
+                                            Bot, improving automated user interaction and engagement workflows.</li>
+                                        <li>Developed and customized responsive enterprise websites using WordPress.
+                                        </li>
+                                        <li>Implemented SEO additions and optimizations to boost organic search
+                                            rankings, improve site performance, and enhance web traffic metrics.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- PROJECT CAROUSEL -->
+                    <div class="section-box">
+                        <h5>Projects</h5>
+
+                        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="5000">
+
+                            <div class="carousel-inner">
+
+                                <!-- Project 1 -->
+                                <div class="carousel-item active project-card">
+                                    <h6><b>RPPS (Resource Project Planning Software)</b></h6>
+                                    <p>
+                                        Utilisation and project efficiency through intelligent planning. This MS project
+                                        at Vellore Institute Of Technology uses business analytics and machine learning
+                                        to analyse employee skill datasets, project requirements, and historical
+                                        utilisation trends.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Year</th>
+                                                <th>Keywords</th>
+                                                <th>Key Functionalities</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Data Science, Predictive Modelling, Machine Learning in HR, Data
+                                                    Visualisation (Dashboards), Talent Optimisation</td>
+                                                <td>Individual</td>
+                                                <td>2026</td>
+                                                <td>Workforce Analytics, Resource Allocation, Bench Management, Skill
+                                                    Gap Analysis, Project Recommendation Systems</td>
+                                                <td>Employee-project recommendation engine, skill-gap analysis,
+                                                    workforce analytics dashboard, bench-duration monitoring, utilisation
+                                                    rate tracking, predictive and prescriptive resource planning.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Project 2 -->
+                                <div class="carousel-item project-card">
+                                    <h6><b>Finance Calculator</b></h6>
+                                    <p>
+                                        A lightweight Python library for essential finance analytics, ranging from basic
+                                        profitability metrics to advanced risk simulations and time-value-of-money
+                                        calculations.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Project Link</th>
+                                                <th>Features</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Python, Finance</td>
+                                                <td>Individual Contributor</td>
+                                                <td><a href="https://pypi.org/project/fincalc-lib/" target="_blank"
+                                                        rel="noopener noreferrer">View Package</a></td>
+                                                <td>NPS, profitability margins, EBITDA/EBITA, current ratio,
+                                                    debt-to-equity, ROE, FCF, CFO, cash-flow margin, NPV, FV, Sharpe
+                                                    Ratio, Monte Carlo price simulations, and audit logging.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Project 3 -->
+                                <div class="carousel-item project-card">
+                                    <h6><b>Flask-URL-Shortner-App</b></h6>
+                                    <p>
+                                        A simple domain-independent URL shortener built using Flask. It accepts valid
+                                        URLs across domains such as .com, .org, .in, and .ly, then redirects users
+                                        through generated short links.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Project Link</th>
+                                                <th>Key Functionalities</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Python 3, Flask, urllib.parse</td>
+                                                <td>Individual Contributor</td>
+                                                <td><a href="https://github.com/Akansha9821/Flask-URL-Shortner-App"
+                                                        target="_blank" rel="noopener noreferrer">View Repo</a></td>
+                                                <td>Domain-independent URL handling, random 5-character short-code
+                                                    generation, original URL redirection, and validation for all valid
+                                                    URLs.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Project 4 -->
+                                <div class="carousel-item project-card">
+                                    <h6><b>Rozerpay Payment Integration</b></h6>
+                                    <p>
+                                        A payment integration project that creates a seamless checkout experience using
+                                        Razorpay's standard checkout workflow and secure backend order creation.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Key Functionalities</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Python, HTML, CSS</td>
+                                                <td>Individual Contributor</td>
+                                                <td>Credit/debit card, UPI, net banking, and wallet payments; secure
+                                                    Python backend communication with Razorpay APIs; test-mode setup for
+                                                    debugging; and automatic success-page redirection.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Project 5 -->
+                                <div class="carousel-item project-card">
+                                    <h6><b>pdf_text_extractor</b></h6>
+                                    <p>
+                                        A lightweight and efficient Python utility designed to parse, extract, and clean
+                                        textual data from PDF files for reuse in text, JSON, NLP, analytics, and
+                                        archiving workflows.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Key Functionalities</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Python, HTML, CSS, PyPDF2, pdfplumber, pypdf</td>
+                                                <td>Individual Contributor</td>
+                                                <td>Single-page and multi-page PDF parsing, text extraction, content
+                                                    cleanup, structured export support, NLP preprocessing, data analysis,
+                                                    and document archiving support.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Project 6 -->
+                                <div class="carousel-item project-card">
+                                    <h6><b>Online Voting Application</b></h6>
+                                    <p>
+                                        An online voting system designed to reduce fraud in manual voting and earlier
+                                        online voting systems by combining face recognition, OTP validation, and
+                                        database-backed voter verification.
+                                    </p>
+
+                                    <table class="project-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Skills Used</th>
+                                                <th>Team Size</th>
+                                                <th>Key Functionalities</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Python, Django, OpenCV, MySQL, SSL/TLS</td>
+                                                <td>4</td>
+                                                <td>Location-free voting, face recognition, OTP verification, voter
+                                                    database validation, secure access control, and candidate selection
+                                                    after successful identity matching.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <!-- ARROWS -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATIONS -->
+                    <div class="section-box">
+                        <h5>Certifications</h5>
+
+                        <div class="accordion accordion-flush certification-accordion" id="certificateAccordion">
+                            
+                            <!-- Certificate 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseOne" aria-expanded="true"
+                                        aria-controls="certificateCollapseOne">
+                                        Microsoft Azure Essentials by Microsoft Press
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="certificateHeadingOne" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/microsoft_press.png"
+                                                    alt="Data Science certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b>  LinkedIn </p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b> April 2026 </p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/learning/certificates/7bd6bde4cc0c6c4f984032c9d1e2ccf51699b8d6a6baeb41c4eed9ae88cbc6d7" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseTwo" aria-expanded="false"
+                                        aria-controls="certificateCollapseTwo">
+                                        Google Cloud Digital Leader
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateHeadingTwo" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/udemy.png"
+                                                    alt="Python certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> Udemy</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b> May 2025 </p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/in/akansha-rana9821/overlay/Certifications/153450982/treasury?profileId=ACoAADsaHBwBjz-KS3DhoR55RJSzajC61JeYBaE" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseThree" aria-expanded="false"
+                                        aria-controls="certificateCollapseThree">
+                                        AWS Cloud Technical Essentials
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateHeadingThree" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/aws_cloud_techniessentials.png"
+                                                    alt="Machine learning certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> AWS</p>
+                                                <p class="certificate-issuer"><b>Isse Date:</b>2022</p>
+                                                <a class="certificate-link" href="https://coursera.org/share/22f5d9a68e4bda307a2c05124c76994e" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapsefour" aria-expanded="true"
+                                        aria-controls="certificateCollapsefour">
+                                        Foundations of Project Management
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapsefour" class="accordion-collapse collapse show"
+                                    aria-labelledby="certificateCollapsefour" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/foundation_of_project_management.png"
+                                                    alt="Data Science certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b>Coursera(Google)</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b> June 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapsefive" aria-expanded="false"
+                                        aria-controls="certificateCollapsefive">
+                                        Financial Accounting Foundations
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapsefive" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapsefive" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/Finance Accounting Foundation.png"
+                                                    alt="Python certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b>linkedin</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b>May 2026</p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/in/akansha-rana9821/overlay/Certifications/1250282556/treasury/?profileId=ACoAADsaHBwBjz-KS3DhoR55RJSzajC61JeYBaE" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Certificate 6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapsesix" aria-expanded="false"
+                                        aria-controls="certificateCollapsesix">
+                                        Key Account Management
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapsesix" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapsesix" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/key_account_mamangement.png"
+                                                    alt="Machine learning certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> LinkedIn</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b>2026</p>
+                                                <a class="certificate-link" href="#" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Certificate 7 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseseven" aria-expanded="true"
+                                        aria-controls="certificateCollapseseven">
+                                        Python in Excel for Financial Professionals
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseseven" class="accordion-collapse collapse show"
+                                    aria-labelledby="certificateCollapseseven" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/python_excel_finance_Professionals.png"
+                                                    alt="Data Science certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> linkedin</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b>Apr 2026</p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/learning/certificates/03a4246d640b56c109619d912c27b728230c46721c7c59535d63e44064941def" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 8 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseEight" aria-expanded="false"
+                                        aria-controls="certificateCollapseEight">
+                                        Getting Started with Python for Finance
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseEight" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapseEight" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/python_finance.png"
+                                                    alt="Python certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> LinkedIn</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b>Apr 2026</p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/learning/certificates/b046c786daf09a7e05bac26e7893b56bb426ebaf9992d68cba535508646979b6" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Certificate 9 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseNine" aria-expanded="false"
+                                        aria-controls="certificateCollapseNine">
+                                        Root Cause Analysis: Systemic Problem Prevention
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseNine" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapseNine" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/Root_Cause_Analysis.png"
+                                                    alt="Machine learning certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> Linkedin</p>
+                                                <p class="certificate-issuer"><b>Issue Date:</b> APR 2026</p>
+                                                <a class="certificate-link" href="#" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certificate 10 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseten" aria-expanded="false"
+                                        aria-controls="certificateCollapseten">
+                                        Excel Essential Training (Microsoft 365)
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseten" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapseten" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/excel_essential_training .png"
+                                                    alt="Machine learning certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b>Linkedin</p>
+                                                <p class="certificate-issuer"><b>Issuer:</b>APR 2026</p>
+                                                <a class="certificate-link" href="https://www.linkedin.com/in/akansha-rana9821/overlay/Certifications/1292270690/treasury/?profileId=ACoAADsaHBwBjz-KS3DhoR55RJSzajC61JeYBaE" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- Certificate 11 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="certificateHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#certificateCollapseeleven" aria-expanded="false"
+                                        aria-controls="certificateCollapseeleven">
+                                        Django Essential Training
+                                    </button>
+                                </h2>
+                                <div id="certificateCollapseeleven" class="accordion-collapse collapse"
+                                    aria-labelledby="certificateCollapseeleven" data-bs-parent="#certificateAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <img class="certificate-image"
+                                                    src="./assets/img/Django Essential Training.png"
+                                                    alt="Machine learning certification certificate">
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <p class="certificate-issuer"><b>Issuer:</b> Linkedin</p>
+                                                <!-- <p class="certificate-issuer"><b>Issue Date:</b> Linkedin</p> -->
+                                                <a class="certificate-link" href="#" target="_blank"
+                                                    rel="noopener noreferrer">View Certificate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="layout-container">
+            <div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                        <h6 class="footer-title">Professional Hobbies</h6>
+                        <ul class="footer-list">
+                            <li>Technical blogging on data engineering and backend systems</li>
+                            <li>Exploring cloud architecture, automation, and analytics tools</li>
+                            <li>Building dashboard prototypes and proof-of-concept utilities</li>
+                            <li>Reading product, leadership, and software architecture case studies</li>
+                            <li>Mentoring peers on Python, APIs, SQL, and project delivery practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h6 class="footer-title">Professional Activities</h6>
+                        <ul class="footer-list">
+                            <li>Hackathons focused on analytics, automation, and workforce planning</li>
+                            <li>Technical workshops, webinars, and certification-based upskilling</li>
+                            <li>Open-source package development and GitHub portfolio maintenance</li>
+                            <li>Agile ceremonies, sprint planning, code review, and release coordination</li>
+                            <li>Resume review, interview preparation, and knowledge-sharing sessions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-copy">
+                &copy; 2025 Akansha Rana
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function printProfile() {
+            window.print();
+        }
+    </script>
+
+</body>
+
+</html>
